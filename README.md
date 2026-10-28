@@ -13,3 +13,23 @@ To install the latest pre-compiled static binary of LBMesh on macOS (Apple Silic
 
 ```bash
 curl -fsSL https://get.lbmesh.io | sh
+```
+
+---
+
+## 🧹 Uninstall
+
+Removes the LBMesh binary (Homebrew or `/usr/local/bin`) and, if you confirm, the `~/.lbmesh` data directory:
+
+```bash
+curl -fsSL https://get.lbmesh.io/uninstall.sh | sh
+```
+
+For a fully clean removal with no prompts (ready for a fresh install):
+
+```bash
+curl -fsSL https://get.lbmesh.io/uninstall.sh | sh -s -- --purge
+```
+
+Options: `--purge` (delete `~/.lbmesh`), `--keep-data` (keep it), `--force` (proceed even if instances are running).
+Stop running recipes first with `lbmesh down <recipe>`.
